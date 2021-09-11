@@ -1,0 +1,97 @@
+@import 'variables';
+@import 'logo';
+//@import 'hero';
+
+html{
+    background-color: $violet;
+    
+    color: #fff;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    line-height: 1.6;
+    background-image:url("/images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+}
+
+.container{
+    display: block;
+    
+    #mockup{
+        height: 19rem;
+        width: 20.9375rem;
+        margin: auto;
+        text-align: center;
+        position: relative;
+        top: 5rem;
+        
+        img{
+            height: 14.0625rem;
+            width: auto;
+        }
+    }
+
+    #intro{
+        position: relative;
+        top: 5rem;
+        text-align: center;
+        height: 27.5rem;
+
+        h2{
+            font-family:'Poppins';
+            font-weight: 600;
+        }
+
+        .message{
+            font-family: 'Open Sans';
+            font-weight: 400;
+            text-align: center;
+            margin: 0 1.875rem;
+        }
+    }
+}
+
+button{
+    position: relative;
+    top: 2rem;
+    margin: 1rem 0;
+    background-color: $white;
+    color: $violet;
+    font-family: 'Open Sans';
+    height: 2.5rem;
+    width: 14rem;
+    border-radius: 50px;
+    box-shadow:0px 5px 5px black;
+}
+
+.social-media{
+    height: 3rem;
+    width: 14rem;
+    position: relative;
+    top: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    font-size: 1.5rem;
+    
+}
+
+
+
+footer{
+    text-align: center;
+    position: relative;
+    top: 2rem;
+    
+}
