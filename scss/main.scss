@@ -1,10 +1,9 @@
 @import 'variables';
 @import 'logo';
-//@import 'hero';
+@import 'hero';
 
 html{
     background-color: $violet;
-    
     color: #fff;
     box-sizing: border-box;
     font-size: 100%;
@@ -22,11 +21,22 @@ body{
     background-repeat: no-repeat;
     background-size: contain;
     height: 100vh;
+    @include desktop-view {
+        background-image: url("/images/bg-desktop.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 }
 
 .container{
     display: block;
-    
+    @include desktop-view{
+        display: flex;
+        flex-direction: row;
+        height: 100vh;
+        width: 100vw;
+    }
+
     #mockup{
         height: 19rem;
         width: 20.9375rem;
@@ -34,11 +44,21 @@ body{
         text-align: center;
         position: relative;
         top: 5rem;
-        
+        @include desktop-view {
+            width: 60vw;
+            margin: 0;
+
+        }
         img{
             height: 14.0625rem;
             width: auto;
+
+            @include desktop-view{
+                height: 36rem;
+                width: auto;
+            }
         }
+
     }
 
     #intro{
@@ -46,10 +66,19 @@ body{
         top: 5rem;
         text-align: center;
         height: 27.5rem;
+        @include desktop-view{
+            height: 100vh;
+            width: 40vw;
+            text-align: left;
+            padding: 3rem 1rem;
 
+        }
         h2{
             font-family:'Poppins';
             font-weight: 600;
+            @include desktop-view{
+                font-size: 3rem;
+            }
         }
 
         .message{
@@ -57,6 +86,11 @@ body{
             font-weight: 400;
             text-align: center;
             margin: 0 1.875rem;
+            @include desktop-view{
+                text-align: left;
+                margin: 0;
+                font-size: 1rem;
+            }
         }
     }
 }
@@ -84,7 +118,6 @@ button{
     align-items: center;
     margin: auto;
     font-size: 1.5rem;
-    
 }
 
 
