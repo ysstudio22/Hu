@@ -1,13 +1,19 @@
 .logo {
-  display: block;
   position: relative;
-  float: left;
+  height: 2rem;
+  width: auto;
   left: 2rem;
   top: 2rem;
 }
 
 .logo #logo {
   height: 2rem;
+}
+
+@media (min-width: 90rem) {
+  .logo #logo {
+    height: 4rem;
+  }
 }
 
 html {
@@ -43,6 +49,8 @@ body {
 
 .container {
   display: block;
+  height: 100vh;
+  width: 100vw;
 }
 
 @media (min-width: 90rem) {
@@ -56,13 +64,13 @@ body {
             flex-direction: row;
     height: 100vh;
     width: 100vw;
+    margin: 0;
+    padding: 0;
   }
 }
 
 .container #mockup {
-  height: 19rem;
-  width: 20.9375rem;
-  margin: auto;
+  height: 17rem;
   text-align: center;
   position: relative;
   top: 5rem;
@@ -70,7 +78,8 @@ body {
 
 @media (min-width: 90rem) {
   .container #mockup {
-    width: 60vw;
+    width: 50rem;
+    height: 30rem;
     margin: 0;
   }
 }
@@ -82,6 +91,7 @@ body {
 
 @media (min-width: 90rem) {
   .container #mockup img {
+    padding: 2rem;
     height: 36rem;
     width: auto;
   }
@@ -89,17 +99,17 @@ body {
 
 .container #intro {
   position: relative;
-  top: 5rem;
+  top: 7rem;
   text-align: center;
   height: 27.5rem;
+  padding: 0 2rem;
 }
 
 @media (min-width: 90rem) {
   .container #intro {
-    height: 100vh;
-    width: 40vw;
+    height: 85vh;
+    width: 50vw;
     text-align: left;
-    padding: 3rem 1rem;
   }
 }
 
@@ -118,7 +128,6 @@ body {
   font-family: 'Open Sans';
   font-weight: 400;
   text-align: center;
-  margin: 0 1.875rem;
 }
 
 @media (min-width: 90rem) {
@@ -132,7 +141,6 @@ body {
 button {
   position: relative;
   top: 2rem;
-  margin: 1rem 0;
   background-color: #fff;
   color: #674baf;
   font-family: 'Open Sans';
@@ -143,11 +151,19 @@ button {
           box-shadow: 0px 5px 5px black;
 }
 
+@media (min-width: 90rem) {
+  button {
+    top: 5rem;
+    height: 3rem;
+    width: 10rem;
+  }
+}
+
 .social-media {
   height: 3rem;
-  width: 14rem;
+  width: auto;
   position: relative;
-  top: 2.5rem;
+  top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -157,12 +173,25 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: auto;
   font-size: 1.5rem;
 }
 
-footer {
-  text-align: center;
+@media (min-width: 90rem) {
+  .social-media {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: baseline;
+        -ms-flex-pack: baseline;
+            justify-content: baseline;
+  }
+}
+
+.attribution {
   position: relative;
-  top: 2rem;
+  top: 7rem;
 }
