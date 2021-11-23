@@ -140,4 +140,9 @@ button{
 .attribution{
     position: relative;
     top: 7rem;
+    @include desktop-view {
+        text-align: right;
+        position: relative;
+        top: 20rem;
+    }
 }

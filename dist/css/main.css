@@ -192,3 +192,11 @@ button {
   position: relative;
   top: 7rem;
 }
+
+@media (min-width: 90rem) {
+  .attribution {
+    text-align: right;
+    position: relative;
+    top: 20rem;
+  }
+}
