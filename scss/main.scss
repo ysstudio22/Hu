@@ -126,9 +126,14 @@ button{
     align-items: center;
     font-size: 1.5rem;
     @include desktop-view{
-       display: flex;
-       flex-direction: row;
-       justify-content: baseline;
+       position: relative;
+       text-align: right;
+       display: block;
+       top: 20rem;
+       
+       i{
+           padding: 1rem;
+       }
     }
 }
 

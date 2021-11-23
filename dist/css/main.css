@@ -178,16 +178,13 @@ button {
 
 @media (min-width: 90rem) {
   .social-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: baseline;
-        -ms-flex-pack: baseline;
-            justify-content: baseline;
+    position: relative;
+    text-align: right;
+    display: block;
+    top: 20rem;
+  }
+  .social-media i {
+    padding: 1rem;
   }
 }
 
