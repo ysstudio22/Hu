@@ -3,7 +3,7 @@
     
     position: relative;
     height: 2rem;
-    width:auto;
+    width: 8.081875rem;
     left: 2rem;
     top: 2rem;
 
@@ -11,6 +11,7 @@
         height: 2rem;
         @include desktop-view{
             height: 4rem;
+            width: auto;
         }
     }
 }

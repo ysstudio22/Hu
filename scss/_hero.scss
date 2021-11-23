@@ -4,7 +4,6 @@ $screen-desktop: 90rem;
 
 //desktop screen
 @mixin desktop-view{
-
 @media (min-width: $screen-desktop) {
         @content
     }
