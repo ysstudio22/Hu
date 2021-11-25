@@ -32,20 +32,20 @@ body{
 }
 
 .container{
-    display: block;
+    //display: block;
     height: 100vh;
     width: 100vw;
     @include desktop-view{
         display: flex;
-        flex-direction: row;
-        
+        align-content: flex-start;
+        width: 100%;
     }
 
     #mockup{
         height: 17rem;
         text-align: center;
-        position: relative;
-        top: 5rem;
+        padding: 3rem 0rem;
+        
         @include desktop-view {
             position: relative;
             left: 0;
@@ -67,13 +67,13 @@ body{
     }
 
     #intro{
-        display: block;
+        //display: block;
         position: relative;
-        top: 3rem;
+        //top: 4rem;
         text-align: center;
         height: 25.5rem;
         width: auto;
-        padding: 0 2rem;
+        padding: 0rem 2rem;
         @include desktop-view{
             display: flex;
             flex-direction: column;
@@ -85,6 +85,7 @@ body{
         h2{
             font-family:'Poppins';
             font-weight: 600;
+            padding: 1rem 0rem;
             @include desktop-view{
                 font-size: 3rem;
                 font-family: 'Poppins';
@@ -95,6 +96,7 @@ body{
             font-family: 'Open Sans';
             font-weight: 400;
             text-align: center;
+            padding: 1rem 0rem;
             @include desktop-view{
                 text-align: left;
                 margin: 0;
@@ -104,14 +106,17 @@ body{
     }
 }
 
+#button{
+    padding: 1.5rem;
+}
+
 button{
-    position: relative;
-    top: 2rem;
     background-color: $white;
     color: $violet;
     font-family: 'Open Sans';
-    height: 2.5rem;
+    height: 3rem;
     width: 14rem;
+    font-size: 1rem;
     border-radius: 50px;
     box-shadow:0px 5px 5px black;
     @include desktop-view{
@@ -122,14 +127,13 @@ button{
 }
 
 .social-media{
-    height: 3rem;
-    width: auto;
-    position: relative;
-    top: 5rem;
+    padding: 2rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-size: 1.5rem;
+    i{
+        font-size: 1.5rem;
+    }
     @include desktop-view{
        position: relative;
        text-align: right;
@@ -143,8 +147,7 @@ button{
 }
 
 .attribution{
-    position: relative;
-    top: 7rem;
+    
     @include desktop-view {
         text-align: right;
         position: relative;
