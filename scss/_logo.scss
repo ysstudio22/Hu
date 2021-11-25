@@ -1,12 +1,11 @@
 @import 'hero';
 .logo{
     
-    position: relative;
-    height: 2rem;
-    width: 8.081875rem;
-    //left: 2rem;
-    //top: 2rem;
     padding: 2rem 1rem;
+    @include desktop-view {
+        padding: 0 rem;
+        width: 0;
+    }
 
     #logo{
         height: 2rem;

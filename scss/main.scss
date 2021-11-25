@@ -37,27 +37,28 @@ body{
     width: 100vw;
     @include desktop-view{
         display: flex;
-        align-content: flex-start;
+        flex-direction: row;
+        justify-content: center;
+        justify-items:center;
         width: 100%;
     }
 
     #mockup{
         height: 17rem;
         text-align: center;
-        padding: 3rem 0rem;
+        padding: 2rem 0rem;
         
         @include desktop-view {
-            position: relative;
-            left: 0;
-            top: 10rem;
+            display: flex;
+            align-self: center;
             height: 36rem;
+            padding: 1rem;
         }
 
         img{
             height: 14.0625rem;
             width: auto;
             @include desktop-view{
-                position: relative;
                 padding: 1rem;
                 height: 36rem;
                 width: auto;
@@ -67,20 +68,18 @@ body{
     }
 
     #intro{
-        //display: block;
-        position: relative;
-        //top: 4rem;
         text-align: center;
         height: 25.5rem;
         width: auto;
-        padding: 0rem 2rem;
+        padding: 0rem 2.15rem;
         @include desktop-view{
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            align-self: center;
             text-align: left;
+            padding: 1.5rem 1.5rem;
             height: 45rem;
-            width: 55rem;
+            width: 37vw;
         }
         h2{
             font-family:'Poppins';
@@ -96,7 +95,7 @@ body{
             font-family: 'Open Sans';
             font-weight: 400;
             text-align: center;
-            padding: 1rem 0rem;
+            padding: 0.5rem 0rem;
             @include desktop-view{
                 text-align: left;
                 margin: 0;
@@ -107,7 +106,7 @@ body{
 }
 
 #button{
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
 button{
@@ -120,14 +119,14 @@ button{
     border-radius: 50px;
     box-shadow:0px 5px 5px black;
     @include desktop-view{
-        top: 5rem;
-        height: 3.5rem;
-        width: 10rem;
+
+        height: 3rem;
+        width: 15rem;
     }
 }
 
 .social-media{
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -135,10 +134,8 @@ button{
         font-size: 1.5rem;
     }
     @include desktop-view{
-       position: relative;
-       text-align: right;
-       display: block;
-       top: 10rem;
+       display: flex;
+       justify-content: right;
        
        i{
            padding: 1rem;
@@ -150,7 +147,6 @@ button{
     
     @include desktop-view {
         text-align: right;
-        position: relative;
-        top: 11rem;
+        
     }
 }
