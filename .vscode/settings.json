@@ -1,0 +1,6 @@
+{
+    "projectManager.groupList": true,
+    "projectManager.git.baseFolders": [
+        "Desktop"
+    ]
+}

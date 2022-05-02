@@ -1,10 +1,2 @@
-//Breakpoints
-$screen-mobile: 23.4375rem;
-$screen-desktop: 90rem;
-
-//desktop screen
-@mixin desktop-view{
-@media (min-width: $screen-desktop) {
-        @content
-    }
-}
+$mobile: 375px;
+$desktop: 1440px;
