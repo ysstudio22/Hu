@@ -12,46 +12,80 @@ body{
     color: $white;
     height: $mobile-height;
     width: $mobile-width;
-    text-align: center;
-    background-image: url(/images/bg-mobile.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    
+    
+    @include breaks(desktop){
+        background-image: url(/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
 }
 
-section{
+main{
     display: flex;
     flex-direction: column;
     height: $mobile-height;
     width: $mobile-width;
+    background-image: url(/images/bg-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include breaks(desktop){
+        display: flex;
+        flex-direction: row;
+        width: $desktop-width;
+        height: $desktop-height;
+    }
 }
 
-#logo {
-    position: relative;
-    top: 1rem;
-    left: 2rem;
-    height: 3rem;
+#logo{
+    height: 2rem;
     width: 7rem;
-    margin-bottom: 1rem;
+
+    @include breaks(desktop) {
+        height: 6rem;
+        width: 8rem;
+    }
 }
 .container{
     padding: 2rem;
-    height: 14rem;
+    height: 16rem;
     width: $mobile-width;
     justify-content: center;
     align-items: center;
+
+    @include breaks(desktop){
+        height: 18rem;
+        width: 40vw;
+        justify-content: flex-start;
+    }
 }
 
 #mockup {
     height: 14rem;
     width: 18rem;
+
+    @include breaks(desktop){
+        height: 18rem;
+        
+        
+    }
 }
 
+#info{
+    text-align: center;
+    @include breaks(desktop){
+        width: 40vw;
+    }
+}
 .text{
     justify-content: center;
     align-items: center;
     margin-top: 2rem;
     margin-left: 2.3rem;
     margin-right: 2.3rem;
+
+    
 }
 
 h2, p{
@@ -92,7 +126,7 @@ p{
 }
 
 .social-media{
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .fa-brands{

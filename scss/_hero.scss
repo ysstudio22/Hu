@@ -1,4 +1,11 @@
-$mobile-width: 23.4375rem;
-$mobile-height: 41.6875rem;
-$desktop-width: 90rem;
-$desktop-height: 56.25rem;
+$media-expressions: (
+    'mobile': 23.4375rem, 
+    'desktop': 64rem
+    );
+
+@mixin breaks($size) {
+    @media (min-width: map-get($media-expressions, $size)) {
+        @content
+    }
+}
+
