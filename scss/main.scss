@@ -1,97 +1,135 @@
 @import 'variables';
-@import 'logo';
-//@import 'hero';
+@import 'hero';
 
-html{
-    background-color: $violet;
-    
-    color: #fff;
-    box-sizing: border-box;
-    font-size: 100%;
-}
-
-* {
+*,*{
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 body{
-    line-height: 1.6;
-    background-image:url("/images/bg-mobile.svg");
+    background-color: $violet;
+    color: $white;
+    height: $mobile-height;
+    width: $mobile-width;
+    
+    
+    @include breaks(desktop){
+        background-image: url(/images/bg-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    height: $mobile-height;
+    width: $mobile-width;
+    background-image: url(/images/bg-mobile.svg);
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100vh;
+
+    @include breaks(desktop){
+        display: flex;
+        flex-direction: row;
+        width: $desktop-width;
+        height: $desktop-height;
+    }
 }
 
+#logo{
+    height: 2rem;
+    width: 7rem;
+
+    @include breaks(desktop) {
+        height: 6rem;
+        width: 8rem;
+    }
+}
 .container{
-    display: block;
-    
-    #mockup{
-        height: 19rem;
-        width: 20.9375rem;
-        margin: auto;
-        text-align: center;
-        position: relative;
-        top: 5rem;
-        
-        img{
-            height: 14.0625rem;
-            width: auto;
-        }
-    }
+    padding: 2rem;
+    height: 16rem;
+    width: $mobile-width;
+    justify-content: center;
+    align-items: center;
 
-    #intro{
-        position: relative;
-        top: 5rem;
-        text-align: center;
-        height: 27.5rem;
-
-        h2{
-            font-family:'Poppins';
-            font-weight: 600;
-        }
-
-        .message{
-            font-family: 'Open Sans';
-            font-weight: 400;
-            text-align: center;
-            margin: 0 1.875rem;
-        }
+    @include breaks(desktop){
+        height: 18rem;
+        width: 40vw;
+        justify-content: flex-start;
     }
 }
 
-button{
-    position: relative;
-    top: 2rem;
-    margin: 1rem 0;
-    background-color: $white;
-    color: $violet;
-    font-family: 'Open Sans';
+#mockup {
+    height: 14rem;
+    width: 18rem;
+
+    @include breaks(desktop){
+        height: 18rem;
+        
+        
+    }
+}
+
+#info{
+    text-align: center;
+    @include breaks(desktop){
+        width: 40vw;
+    }
+}
+.text{
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 2.3rem;
+    margin-right: 2.3rem;
+
+    
+}
+
+h2, p{
+    font-size: 1rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding: .5rem;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+.button{
+    padding: 1rem;
+}
+
+.cta-button{
     height: 2.5rem;
-    width: 14rem;
+    width: 12rem;
+    background-color: $white;
+    color: $soft-magenta;
     border-radius: 50px;
-    box-shadow:0px 5px 5px black;
+    font-family: 'Poppins';
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    &:hover{
+        color: $white;
+        background-color: $soft-magenta;
+    }
 }
 
 .social-media{
-    height: 3rem;
-    width: 14rem;
-    position: relative;
-    top: 2.5rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: auto;
-    font-size: 1.5rem;
-    
+    padding: 1.5rem;
 }
 
-
-
-footer{
-    text-align: center;
-    position: relative;
-    top: 2rem;
-    
+.fa-brands{
+    font-size: 1.3rem;
+    padding: .5rem;
 }

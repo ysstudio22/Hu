@@ -1,17 +1,11 @@
-//Breakpoints
-$screen-mobile: 23.4375rem;
-$screen-desktop: 90rem;
+$media-expressions: (
+    'mobile': 23.4375rem, 
+    'desktop': 64rem
+    );
 
-//desktop screen
-@media (min-width: $screen-desktop) {
-    body{
-        background-image: url(/images/bg-desktop.svg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-
-    .container{
-        display: flex;
-        flex-direction: column;
+@mixin breaks($size) {
+    @media (min-width: map-get($media-expressions, $size)) {
+        @content
     }
 }
+
